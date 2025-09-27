@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitcount+Prop+Double:wght@100..900&family=Bitcount+Prop+Single:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Poppins", sans-serif;
+}
+.resume-container {
+  margin: auto;
+  max-width: 1300px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  padding: 10px 50px;
+  background-color: rgb(35, 34, 34);
+  color: rgb(255, 255, 255);
+}
+
+.img-container img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+}
+.header-title h1 {
+  font-size: 3rem;
+}
+.header-title span {
+  font-size: 1.3rem;
+  padding: 0px 5px;
+  opacity: 0.7;
+}
+
+.resume-body {
+  display: flex;
+  justify-content: baseline;
+}
+
+.resume-body-left {
+  width: 35%;
+
+  background-color: rgb(255, 245, 233);
+}
+.resume-body-right {
+  width: 65%;
+}
+
+.contact-Section,
+.education-section,
+.Skills-section {
+  display: flex;
+  flex-direction: column;
+  padding: 3% 10%;
+}
+
+.contact-title,
+.education-title,
+.Skills-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px 0px;
+}
+.contact-details,
+.education-details,
+.Skills-details {
+  display: flex;
+  flex-direction: column;
+}
+.sub-section {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.edu-sub-section,
+.sk-sub-section {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 20px;
+}
+
+.edu-sub-section i,
+.sk-sub-section i {
+  opacity: 0.6;
+}
+
+.Profile-section,
+.Project-section,
+.references-section {
+  padding: 3% 5%;
+}
+
+.Profile-title,
+.Project-title,
+.references-title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.Profile-summary {
+  font-size: 1.1rem;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+.Project-grid {
+  margin: 20px 0px 0px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 10px 0px;
+}
+.Project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  border: 2px solid black;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.Project-card b {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.Project-card span {
+  text-align: justify;
+}
+.Project-card a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.references-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px 0px;
+}
+.references-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.reference-email,
+.reference-contact {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.Project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Project-card a:hover {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .Project-grid,
+  .references-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Make images responsive */
+.img-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Resume container padding for smaller screens */
+.resume-container {
+  padding: 10px;
+}
+
+/* Flex layout adjustments for mobile */
+@media screen and (max-width: 900px) {
+  .resume-body {
+    flex-direction: column;
+  }
+
+  .resume-body-left,
+  .resume-body-right {
+    width: 100%;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .header-title h1 {
+    font-size: 2rem;
+  }
+
+  .header-title span {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Project-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .references-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Profile-summary,
+  .Project-card span,
+  .reference-email,
+  .reference-contact {
+    font-size: 0.9rem;
+  }
+
+  .Project-card b,
+  .reference-title b {
+    font-size: 1.1rem;
+  }
+}
