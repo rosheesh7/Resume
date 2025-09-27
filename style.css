@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 .resume-container {
@@ -181,18 +181,12 @@ hr {
     grid-template-columns: 1fr;
   }
 }
-/* Make images responsive */
+
 .img-container img {
   max-width: 100%;
   height: auto;
 }
 
-/* Resume container padding for smaller screens */
-.resume-container {
-  padding: 10px;
-}
-
-/* Flex layout adjustments for mobile */
 @media screen and (max-width: 900px) {
   .resume-body {
     flex-direction: column;
